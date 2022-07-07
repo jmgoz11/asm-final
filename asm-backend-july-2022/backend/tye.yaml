@@ -1,0 +1,25 @@
+ingress:
+  - name: ingress
+    bindings:
+      - port: 1337
+    rules:
+      - path: /api/references/courses
+        service: courses-api
+
+
+services:
+- name: courses-api
+  project: ./courses-api/courses-api.csproj
+
+
+- name: mongodb
+  external: true
+  bindings:
+    - port: 27017
+      connectionString: mongodb://root:TokyoJoe138!@localhost:${port}?authSource=admin
+
+- name: mongo-express
+  external: true
+  bindings:
+    - port: 8090
+

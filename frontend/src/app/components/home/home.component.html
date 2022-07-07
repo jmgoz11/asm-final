@@ -1,0 +1,30 @@
+<h1>Our Work Ahead</h1>
+
+<p>We need to send to the server a request for a user to register for a course.</p>
+
+<p>The server needs the following data:</p>
+
+<pre>
+  The ID of the Student
+  The ID of the course offering
+  An indication that the student agrees to participate.
+  An indication that the student agrees to pay.
+  The amount they are paying for the course
+  Any comments.
+</pre>
+
+
+<pre>
+  POST http://someserver.com/api/bff/registrationrequests/:offeringId/registrationrequests
+  Content-Type: application/json
+  Authorization: bearer 83983989389839839
+
+
+
+    "acceptsTerms": true,
+    "acceptsPayment": true,
+    "amount": 500.23,
+    "comments": "This looks Rad!"
+
+</pre>
+

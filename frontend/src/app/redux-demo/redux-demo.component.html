@@ -1,0 +1,26 @@
+<div>
+  <button
+    [disabled]="(disableDecrement$ | async) === true"
+    (click)="decrement()"
+    class="btn btn-sm btn-danger"
+  >
+    -
+  </button>
+  <span>{{ current$ | async }}</span>
+  <button (click)="increment()" class="btn btn-sm btn-primary">+</button>
+</div>
+<div>
+  <button
+    (click)="reset()"
+    class="btn btn-lg btn-danger"
+    [disabled]="(current$ | async) === 0"
+  >
+    RESET THE COUNT
+  </button>
+</div>
+
+<app-count-by></app-count-by>
+
+<div>
+  <app-fizz-buzz></app-fizz-buzz>
+</div>

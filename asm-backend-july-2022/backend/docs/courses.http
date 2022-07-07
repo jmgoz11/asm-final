@@ -1,0 +1,16 @@
+### Get All Courses
+
+GET http://localhost:1337/api/references/courses HTTP/1.1
+Accept: application/json
+
+
+### Add A Course
+POST http://localhost:1337/api/references/courses HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "title": "Underwater Basket Weaving LEVEL 2",
+    "description": "Basket weaving Advanced - Soaking Wet",
+    "numberOfDays": 3
+}

@@ -1,0 +1,13 @@
+<div class="alert alert-info" *ngIf="(model$ | async)?.length === 0">
+  <p>There are no courses, or they are being loaded... wait.</p>
+</div>
+
+<ol class="list-unstyled">
+  <li class="card course" *ngFor="let course of model$ | async">
+    <div class="card-header">{{ course.title }}</div>
+    <div class="card-body">
+      <p>{{ course.description }}</p>
+      <p>Number of Days: {{ course.numberOfDays }}</p>
+    </div>
+  </li>
+</ol>
